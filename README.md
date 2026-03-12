@@ -1,0 +1,2 @@
+# exetasi
+for learning puposes
