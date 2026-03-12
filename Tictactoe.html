@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="Tictactoe.css">
+</head>
+<body>
+    <center>
+        <h1>
+            Tic Tac Toe
+        </h1>
+    </center>
+    <div id="mainbody">
+        <div id="cell1" onclick="clicker(this)" class="cells"></div>
+        <div id="cell2" onclick="clicker(this)" class="cells"></div>
+        <div id="cell3" onclick="clicker(this)" class="cells"></div>
+        <div id="cell4" onclick="clicker(this)" class="cells"></div>
+        <div id="cell5" onclick="clicker(this)" class="cells"></div>
+        <div id="cell6" onclick="clicker(this)" class="cells"></div>
+        <div id="cell7" onclick="clicker(this)" class="cells"></div>
+        <div id="cell8" onclick="clicker(this)" class="cells"></div>
+        <div id="cell9" onclick="clicker(this)" class="cells"></div>
+    </div>
+    <input type="submit">
+    <h3 id="winnerteller">Null</h3>
+</body>
+</html>
+<script>
+    let u = 'symbolChooser';
+    let y;
+    // Function through which all the game will work.     
+    function clicker(el){
+        y = el.id;
+        document.getElementById(u).style.display='block';
+        // If the user clicks on the O.
+            document.getElementById('tic').onclick= ()=>{
+                d = document.getElementById(y);
+                if (d.innerHTML ==''){
+                document.getElementById(y).innerHTML="O";
+                document.getElementById(u).style.display="none";
+                y = undefined;
+            }
+               else{
+                alert('This cell is already done');
+               };
+
+                // If else statement to check and decide the winner of the game.   
+
+            if (document.getElementById('cell1').innerHTML == document.getElementById('cell2').innerHTML && document.getElementById('cell2').innerHTML == document.getElementById('cell3').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!');
+            }
+            else if (document.getElementById('cell4').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell6').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!');
+            }
+            else if (document.getElementById('cell7').innerHTML == document.getElementById('cell8').innerHTML && document.getElementById('cell8').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell1').innerHTML == document.getElementById('cell4').innerHTML && document.getElementById('cell4').innerHTML == document.getElementById('cell7').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell2').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell8').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell3').innerHTML == document.getElementById('cell6').innerHTML && document.getElementById('cell6').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell1').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell3').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell7').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else {
+                alert('Draw, no one won!');
+            }
+            };
+            };
+
+            // If the user clicks on the X.
+            document.getElementById('tac').onclick=()=>{
+                 if (document.getElementById(y) ==''){
+                document.getElementById(y).innerHTML="X";
+                document.getElementById(u).style.display="none";
+                y = undefined;
+            }
+               else{
+                alert('This cell is already done');
+               };
+
+               // If else statement to check and decide the winner of the game.   
+
+            if (document.getElementById('cell1').innerHTML == document.getElementById('cell2').innerHTML && document.getElementById('cell2').innerHTML == document.getElementById('cell3').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!');
+            }
+            else if (document.getElementById('cell4').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell6').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!');
+            }
+            else if (document.getElementById('cell7').innerHTML == document.getElementById('cell8').innerHTML && document.getElementById('cell8').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell1').innerHTML == document.getElementById('cell4').innerHTML && document.getElementById('cell4').innerHTML == document.getElementById('cell7').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell2').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell8').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell3').innerHTML == document.getElementById('cell6').innerHTML && document.getElementById('cell6').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell1').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell3').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell7').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else {
+                alert('Draw, no one won!');
+            };
+
+             // Extra If else statement to check and decide the winner of the game in case of if some error occurs.   
+
+            if (document.getElementById('cell1').innerHTML == document.getElementById('cell2').innerHTML && document.getElementById('cell2').innerHTML == document.getElementById('cell3').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!');
+            }
+            else if (document.getElementById('cell4').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell6').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!');
+            }
+            else if (document.getElementById('cell7').innerHTML == document.getElementById('cell8').innerHTML && document.getElementById('cell8').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell1').innerHTML == document.getElementById('cell4').innerHTML && document.getElementById('cell4').innerHTML == document.getElementById('cell7').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell2').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell8').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell3').innerHTML == document.getElementById('cell6').innerHTML && document.getElementById('cell6').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell1').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell9').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else if (document.getElementById('cell3').innerHTML == document.getElementById('cell5').innerHTML && document.getElementById('cell5').innerHTML == document.getElementById('cell7').innerHTML && document.getElementsByClassName('cells').innerHTML !=''){
+                alert('You won, congratulations!')
+            }
+            else {
+                alert('Draw, no one won!');
+            };
+            
+            };
+</script>
